@@ -16,6 +16,7 @@ import { v4 as uuidv4 } from "uuid";
 
 import styles from "./Chat.module.css";
 import Azure from "../../assets/Azure.svg";
+import Word from "../../assets/Word.svg";
 import { multiLingualSpeechRecognizer } from "../../util/SpeechToText";
 
 import {
@@ -268,7 +269,7 @@ const Chat = () => {
         <div className={`${styles.chatContainer} ${styles.MobileChatContainer}`}>
           {!lastQuestionRef.current ? (
             <Stack className={styles.chatEmptyState}>
-              <img src={Azure} className={styles.chatIcon} aria-hidden="true" alt="Azure AI logo" />
+              <img src={Word} className={styles.chatIcon} aria-hidden="true" alt="Word logo" />
               {assistantType === 'contract assistant' ? (
                 <>
                   <h1 className={styles.chatEmptyStateTitle}>Contract Summarizer</h1>
